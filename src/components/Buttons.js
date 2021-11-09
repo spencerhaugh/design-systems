@@ -133,7 +133,7 @@ transition: background-color .2s linear, color .2s linear;
 }
 `;
 
-const PrimaryButton = styled(Button)`
+export const PrimaryButton = styled(Button)`
 background-color: ${props => props.theme.primaryColor};
 border: none;
 color: ${props => props.theme.textColorOnPrimary};
@@ -175,5 +175,3 @@ color: ${props => props.theme.primaryColor};
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
-
-export default PrimaryButton;
