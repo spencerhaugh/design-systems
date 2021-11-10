@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 const App = () => {
     const [useDarkTheme, setUseDarkTheme] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     const buttonStyles = { margin: "0 16px 24px", padding: "8px", background: "none" }
 
@@ -21,6 +22,11 @@ const App = () => {
                 onClick={() => setUseDarkTheme(false)}>
                 Default Theme
             </button>
+            <button
+                style={buttonStyles}
+                onClick={() => setShowModal(!showModal)}>
+                Show Modal
+            </button>
 
             <div
                 style={{
@@ -31,13 +37,13 @@ const App = () => {
                     alignItems: 'center',
                     justifyContent: "space-around"
                 }}>
-                {/* Buttons Examples */}
-                {/* <PrimaryButton>Primary Button!</PrimaryButton>
-                <SecondaryButton>Secondary Button!</SecondaryButton>
-                <TertiaryButton>Tertiary Button!</TertiaryButton> */}
-
                 {/* Modal Example */}
-                <SignUpModal />
+                {/* <SignUpModal showModal={showModal} setShowModal={setShowModal} /> */}
+
+                {/* Buttons Example */}
+                <PrimaryButton>Primary Button!</PrimaryButton>
+                <SecondaryButton>Secondary Button!</SecondaryButton>
+                <TertiaryButton>Tertiary Button!</TertiaryButton>
             </div>
             <GlobalStyle />
         </ThemeProvider>
