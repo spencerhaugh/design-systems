@@ -1,10 +1,11 @@
 import React from "react";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons.js";
-import { action } from '@storybook/addon-actions'
+import { action } from '@storybook/addon-actions';
 
 export default {
-    title: "Example/Buttons",
-    component: 'TheButtons',
+    title: "Component/Sick Buttons",
+    component: PrimaryButton,
+    subcomponents: { SecondaryButton, TertiaryButton },
     argTypes: {
       disabled: {
         control: { type: 'boolean' },
